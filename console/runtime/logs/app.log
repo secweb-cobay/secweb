@@ -1,0 +1,115 @@
+2021-09-08 23:58:36 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#17 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\console\Controller.php(184): yii\base\Controller->runAction('', Array)
+#18 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\Module.php(534): yii\console\Controller->runAction('', Array)
+#19 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\console\Application.php(181): yii\base\Module->runAction('migrate', Array)
+#20 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\console\Application.php(148): yii\console\Application->runAction('migrate', Array)
+#21 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\wamp64\www\yii2Avanzado\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(908): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\console\Controller.php(184): yii\base\Controller->runAction('', Array)
+#16 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\Module.php(534): yii\console\Controller->runAction('', Array)
+#17 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\console\Application.php(181): yii\base\Module->runAction('migrate', Array)
+#18 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\console\Application.php(148): yii\console\Application->runAction('migrate', Array)
+#19 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\wamp64\www\yii2Avanzado\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2021-09-08 23:58:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\LapRusell\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'RUSELL'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\LapRusell'
+    'LOCALAPPDATA' => 'C:\\Users\\LapRusell\\AppData\\Local'
+    'LOGONSERVER' => '\\\\RUSELL'
+    'MOZ_PLUGIN_PATH' => 'C:\\Program Files\\Tracker Software\\PDF Viewer\\Win32\\'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\wamp64\\bin\\php\\php7.0.10;C:\\ProgramData\\ComposerSetup\\bin;;C:\\Users\\LapRusell\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\LapRusell\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 58 Stepping 9, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3a09'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\LAPRUS~1\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\LAPRUS~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Rusell'
+    'USERDOMAIN_ROAMINGPROFILE' => 'Rusell'
+    'USERNAME' => 'LapRusell'
+    'USERPROFILE' => 'C:\\Users\\LapRusell'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'C:\\wamp64\\www\\yii2Avanzado\\'
+    'PHP_SELF' => 'C:\\wamp64\\www\\yii2Avanzado\\yii'
+    'SCRIPT_NAME' => 'C:\\wamp64\\www\\yii2Avanzado\\yii'
+    'SCRIPT_FILENAME' => 'C:\\wamp64\\www\\yii2Avanzado\\yii'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\yii2Avanzado\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1631145516.1917
+    'REQUEST_TIME' => 1631145516
+    'argv' => [
+        0 => 'C:\\wamp64\\www\\yii2Avanzado\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
