@@ -30864,3 +30864,418 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1654565216.321
     'REQUEST_TIME' => 1654565216
 ]
+2022-12-05 22:12:43 [::1][-][tash5dk19bnkeceov1gdmdas32][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#12 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#16 C:\wamp64\www\secweb_project\common\models\User.php(72): yii\db\BaseActiveRecord::findOne(Array)
+#17 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\User.php(700): common\models\User::findIdentity(9)
+#18 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\User.php(199): yii\web\User->renewAuthStatus()
+#19 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\User.php(367): yii\web\User->getIdentity()
+#20 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Component.php(140): yii\web\User->getIsGuest()
+#21 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(83): yii\base\Component->__get('isGuest')
+#22 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#23 [internal function]: yii\base\BaseObject->__construct(Array)
+#24 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\di\Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#25 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#26 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#27 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2-debug\src\Module.php(255): yii\BaseYii::createObject(Array)
+#28 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2-debug\src\Module.php(226): yii\debug\Module->initPanels()
+#29 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#30 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#31 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#32 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\di\Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#33 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#34 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#35 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#36 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#37 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\Application.php(70): yii\base\Application->bootstrap()
+#38 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#39 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#40 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#41 C:\wamp64\www\secweb_project\backend\web\index.php(18): yii\base\Application->__construct('[<span class="s...')
+#42 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#10 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#14 C:\wamp64\www\secweb_project\common\models\User.php(72): yii\db\BaseActiveRecord::findOne(Array)
+#15 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\User.php(700): common\models\User::findIdentity(9)
+#16 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\User.php(199): yii\web\User->renewAuthStatus()
+#17 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\User.php(367): yii\web\User->getIdentity()
+#18 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Component.php(140): yii\web\User->getIsGuest()
+#19 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(83): yii\base\Component->__get('isGuest')
+#20 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#21 [internal function]: yii\base\BaseObject->__construct(Array)
+#22 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\di\Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#23 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#24 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#25 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2-debug\src\Module.php(255): yii\BaseYii::createObject(Array)
+#26 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2-debug\src\Module.php(226): yii\debug\Module->initPanels()
+#27 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#28 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#29 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#30 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\di\Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#31 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#32 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#33 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#34 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#35 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\Application.php(70): yii\base\Application->bootstrap()
+#36 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#37 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#38 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#39 C:\wamp64\www\secweb_project\backend\web\index.php(18): yii\base\Application->__construct('[<span class="s...')
+#40 {main}
+Additional Information:
+
+2022-12-05 22:12:40 [::1][-][tash5dk19bnkeceov1gdmdas32][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.126481042.1650129790'
+    'PHPSESSID' => 'd3cgcecruuj7e2313lkhrb91ri'
+    'advanced-frontend' => '1ela9ialj3i9nv5q5e2sndekot'
+    '_identity-frontend' => '9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-frontend' => '3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq\";}'
+    'advanced-backend' => 'tash5dk19bnkeceov1gdmdas32'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secwebyii/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.62'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb_project/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5'
+    'HTTP_COOKIE' => '_ga=GA1.1.126481042.1650129790; PHPSESSID=d3cgcecruuj7e2313lkhrb91ri; advanced-frontend=1ela9ialj3i9nv5q5e2sndekot; _identity-frontend=9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-frontend=3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq%22%3B%7D; advanced-backend=tash5dk19bnkeceov1gdmdas32; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Rockwell Software\\RSCommon;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\wamp64\\bin\\php\\php5.6.40;C:\\composer;C:\\apache-svn\\bin;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.4.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb_project/backend/web/index.php'
+    'REMOTE_PORT' => '62321'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/secweb_project/backend/web/'
+    'SCRIPT_NAME' => '/secweb_project/backend/web/index.php'
+    'PHP_SELF' => '/secweb_project/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670278357.4674
+    'REQUEST_TIME' => 1670278357
+]
+2022-12-05 22:25:41 [::1][9][tash5dk19bnkeceov1gdmdas32][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: backend\models\search\UserSearch::rol_id in C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Component.php:155
+Stack trace:
+#0 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('rol_id')
+#1 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\validators\Validator.php(258): yii\db\BaseActiveRecord->__get('rol_id')
+#2 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(backend\models\search\UserSearch), Array)
+#3 C:\wamp64\www\secweb_project\backend\models\search\UserSearch.php(53): yii\base\Model->validate()
+#4 C:\wamp64\www\secweb_project\backend\controllers\UserController.php(41): backend\models\search\UserSearch->search(Array)
+#5 [internal function]: backend\controllers\UserController->actionIndex()
+#6 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('index', Array)
+#9 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user/index', Array)
+#10 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\secweb_project\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2022-12-05 22:25:41 [::1][9][tash5dk19bnkeceov1gdmdas32][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.126481042.1650129790'
+    'PHPSESSID' => 'd3cgcecruuj7e2313lkhrb91ri'
+    'advanced-frontend' => '1ela9ialj3i9nv5q5e2sndekot'
+    '_identity-frontend' => '9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-frontend' => '3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq\";}'
+    'advanced-backend' => 'tash5dk19bnkeceov1gdmdas32'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secwebyii/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.62'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb_project/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5'
+    'HTTP_COOKIE' => '_ga=GA1.1.126481042.1650129790; PHPSESSID=d3cgcecruuj7e2313lkhrb91ri; advanced-frontend=1ela9ialj3i9nv5q5e2sndekot; _identity-frontend=9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-frontend=3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq%22%3B%7D; advanced-backend=tash5dk19bnkeceov1gdmdas32; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Rockwell Software\\RSCommon;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\wamp64\\bin\\php\\php5.6.40;C:\\composer;C:\\apache-svn\\bin;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.4.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb_project/backend/web/index.php'
+    'REMOTE_PORT' => '62624'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Findex'
+    'REQUEST_URI' => '/secweb_project/backend/web/index.php?r=user%2Findex'
+    'SCRIPT_NAME' => '/secweb_project/backend/web/index.php'
+    'PHP_SELF' => '/secweb_project/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670279141.5083
+    'REQUEST_TIME' => 1670279141
+]
+2022-12-05 22:35:40 [::1][9][tash5dk19bnkeceov1gdmdas32][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "clientes/index". in C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('clientes/index', Array)
+#1 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\secweb_project\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\secweb_project\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-12-05 22:35:40 [::1][9][tash5dk19bnkeceov1gdmdas32][info][application] $_GET = [
+    'r' => 'clientes/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.126481042.1650129790'
+    'PHPSESSID' => 'd3cgcecruuj7e2313lkhrb91ri'
+    'advanced-frontend' => '1ela9ialj3i9nv5q5e2sndekot'
+    '_identity-frontend' => '9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-frontend' => '3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq\";}'
+    'advanced-backend' => 'tash5dk19bnkeceov1gdmdas32'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secwebyii/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.62'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb_project/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5'
+    'HTTP_COOKIE' => '_ga=GA1.1.126481042.1650129790; PHPSESSID=d3cgcecruuj7e2313lkhrb91ri; advanced-frontend=1ela9ialj3i9nv5q5e2sndekot; _identity-frontend=9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-frontend=3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq%22%3B%7D; advanced-backend=tash5dk19bnkeceov1gdmdas32; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Rockwell Software\\RSCommon;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\wamp64\\bin\\php\\php5.6.40;C:\\composer;C:\\apache-svn\\bin;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.4.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb_project/backend/web/index.php'
+    'REMOTE_PORT' => '62707'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Findex'
+    'REQUEST_URI' => '/secweb_project/backend/web/index.php?r=clientes%2Findex'
+    'SCRIPT_NAME' => '/secweb_project/backend/web/index.php'
+    'PHP_SELF' => '/secweb_project/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670279740.9566
+    'REQUEST_TIME' => 1670279740
+]
+2022-12-05 22:43:37 [::1][9][tash5dk19bnkeceov1gdmdas32][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "alumnos". in C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('alumnos', Array)
+#1 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\secweb_project\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\secweb_project\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-12-05 22:43:37 [::1][9][tash5dk19bnkeceov1gdmdas32][info][application] $_GET = [
+    'r' => 'alumnos'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.126481042.1650129790'
+    'PHPSESSID' => 'd3cgcecruuj7e2313lkhrb91ri'
+    'advanced-frontend' => '1ela9ialj3i9nv5q5e2sndekot'
+    '_identity-frontend' => '9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-frontend' => '3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq\";}'
+    'advanced-backend' => 'tash5dk19bnkeceov1gdmdas32'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secwebyii/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.62'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5'
+    'HTTP_COOKIE' => '_ga=GA1.1.126481042.1650129790; PHPSESSID=d3cgcecruuj7e2313lkhrb91ri; advanced-frontend=1ela9ialj3i9nv5q5e2sndekot; _identity-frontend=9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-frontend=3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq%22%3B%7D; advanced-backend=tash5dk19bnkeceov1gdmdas32; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Rockwell Software\\RSCommon;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\wamp64\\bin\\php\\php5.6.40;C:\\composer;C:\\apache-svn\\bin;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.4.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb_project/backend/web/index.php'
+    'REMOTE_PORT' => '62373'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=alumnos'
+    'REQUEST_URI' => '/secweb_project/backend/web/index.php?r=alumnos'
+    'SCRIPT_NAME' => '/secweb_project/backend/web/index.php'
+    'PHP_SELF' => '/secweb_project/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670280217.4375
+    'REQUEST_TIME' => 1670280217
+]
