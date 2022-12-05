@@ -30864,6 +30864,7 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1654565216.321
     'REQUEST_TIME' => 1654565216
 ]
+<<<<<<< HEAD
 2022-12-05 22:12:43 [::1][-][tash5dk19bnkeceov1gdmdas32][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Connection.php:723
 Stack trace:
 #0 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
@@ -30958,10 +30959,101 @@ Additional Information:
 2022-12-05 22:12:40 [::1][-][tash5dk19bnkeceov1gdmdas32][info][application] $_GET = []
 
 $_POST = []
+=======
+2022-12-05 22:22:37 [::1][-][jdfujftq30r6vhq21knv09a9tp][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced21' in C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#12 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#16 C:\wamp64\www\secweb\common\models\User.php(91): yii\db\BaseActiveRecord::findOne(Array)
+#17 C:\wamp64\www\secweb\common\models\LoginForm.php(74): common\models\User::findByUsername('admin')
+#18 C:\wamp64\www\secweb\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#19 C:\wamp64\www\secweb\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#20 C:\wamp64\www\secweb\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#21 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#22 C:\wamp64\www\secweb\common\models\LoginForm.php(59): yii\base\Model->validate()
+#23 C:\wamp64\www\secweb\backend\controllers\SiteController.php(82): common\models\LoginForm->login()
+#24 [internal function]: backend\controllers\SiteController->actionLogin()
+#25 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#27 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#28 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#29 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced21' in C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#10 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#14 C:\wamp64\www\secweb\common\models\User.php(91): yii\db\BaseActiveRecord::findOne(Array)
+#15 C:\wamp64\www\secweb\common\models\LoginForm.php(74): common\models\User::findByUsername('admin')
+#16 C:\wamp64\www\secweb\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#17 C:\wamp64\www\secweb\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#18 C:\wamp64\www\secweb\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#19 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#20 C:\wamp64\www\secweb\common\models\LoginForm.php(59): yii\base\Model->validate()
+#21 C:\wamp64\www\secweb\backend\controllers\SiteController.php(82): common\models\LoginForm->login()
+#22 [internal function]: backend\controllers\SiteController->actionLogin()
+#23 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#25 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#26 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#27 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1049
+    [2] => Unknown database 'yii2advanced21'
+)
+
+2022-12-05 22:22:36 [::1][-][jdfujftq30r6vhq21knv09a9tp][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'bsSjTsm2phUQXMYQABgC6xE3Ybg42_3b0NIe-IlWsKwnt-0im_DqfUAq8SlGK0u-dX4RyEuUhL6UsCy7zTzByQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+>>>>>>> Rama_LuisLlanes
 
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     '_ga' => 'GA1.1.126481042.1650129790'
     'PHPSESSID' => 'd3cgcecruuj7e2313lkhrb91ri'
     'advanced-frontend' => '1ela9ialj3i9nv5q5e2sndekot'
@@ -30970,40 +31062,75 @@ $_COOKIE = [
     'advanced-backend' => 'tash5dk19bnkeceov1gdmdas32'
     '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
     '_csrf-backend' => '2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7\";}'
+=======
+    '_csrf-backend' => '8129a0f75e8857360e3a7c5327378020885614d86855197dfb0bbb9ad0926bb1a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"IsNlRFLhPv79F3IUdIppsOyeDb2CDjqe\";}'
+    'advanced-backend' => '4n59hlvirmltjgsuobmkogr1ha'
+>>>>>>> Rama_LuisLlanes
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__returnUrl' => 'http://localhost/secwebyii/backend/web/'
     '__id' => 9
     '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+=======
+    '__returnUrl' => 'http://localhost/secweb/backend/web/'
+>>>>>>> Rama_LuisLlanes
 ]
 
 $_SERVER = [
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
     'HTTP_SEC_CH_UA_MOBILE' => '?0'
     'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.62'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+=======
+    'CONTENT_LENGTH' => '236'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+>>>>>>> Rama_LuisLlanes
     'HTTP_SEC_FETCH_SITE' => 'same-origin'
     'HTTP_SEC_FETCH_MODE' => 'navigate'
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_SEC_FETCH_DEST' => 'document'
+<<<<<<< HEAD
     'HTTP_REFERER' => 'http://localhost/secweb_project/backend/'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
     'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5'
     'HTTP_COOKIE' => '_ga=GA1.1.126481042.1650129790; PHPSESSID=d3cgcecruuj7e2313lkhrb91ri; advanced-frontend=1ela9ialj3i9nv5q5e2sndekot; _identity-frontend=9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-frontend=3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq%22%3B%7D; advanced-backend=tash5dk19bnkeceov1gdmdas32; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7%22%3B%7D'
     'PATH' => 'C:\\Program Files\\Rockwell Software\\RSCommon;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\wamp64\\bin\\php\\php5.6.40;C:\\composer;C:\\apache-svn\\bin;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+=======
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => '_csrf-backend=8129a0f75e8857360e3a7c5327378020885614d86855197dfb0bbb9ad0926bb1a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22IsNlRFLhPv79F3IUdIppsOyeDb2CDjqe%22%3B%7D; advanced-backend=4n59hlvirmltjgsuobmkogr1ha'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\apache-svn\\bin;C:\\Program Files\\Git\\cmd;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+>>>>>>> Rama_LuisLlanes
     'SystemRoot' => 'C:\\windows'
     'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\windows'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.4.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.4.9'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+>>>>>>> Rama_LuisLlanes
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
@@ -31013,6 +31140,7 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
     'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+<<<<<<< HEAD
     'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb_project/backend/web/index.php'
     'REMOTE_PORT' => '62321'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
@@ -31045,10 +31173,113 @@ Stack trace:
 ]
 
 $_POST = []
+=======
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '59394'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670278956.5235
+    'REQUEST_TIME' => 1670278956
+]
+2022-12-05 22:23:38 [::1][-][8oj0t2u7ba4gmr754br62rjvlm][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced21' in C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#12 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#16 C:\wamp64\www\secweb\common\models\User.php(91): yii\db\BaseActiveRecord::findOne(Array)
+#17 C:\wamp64\www\secweb\common\models\LoginForm.php(74): common\models\User::findByUsername('root')
+#18 C:\wamp64\www\secweb\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#19 C:\wamp64\www\secweb\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'rootroot')
+#20 C:\wamp64\www\secweb\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#21 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#22 C:\wamp64\www\secweb\common\models\LoginForm.php(59): yii\base\Model->validate()
+#23 C:\wamp64\www\secweb\backend\controllers\SiteController.php(82): common\models\LoginForm->login()
+#24 [internal function]: backend\controllers\SiteController->actionLogin()
+#25 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#27 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#28 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#29 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced21' in C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#10 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#14 C:\wamp64\www\secweb\common\models\User.php(91): yii\db\BaseActiveRecord::findOne(Array)
+#15 C:\wamp64\www\secweb\common\models\LoginForm.php(74): common\models\User::findByUsername('root')
+#16 C:\wamp64\www\secweb\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#17 C:\wamp64\www\secweb\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'rootroot')
+#18 C:\wamp64\www\secweb\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#19 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#20 C:\wamp64\www\secweb\common\models\LoginForm.php(59): yii\base\Model->validate()
+#21 C:\wamp64\www\secweb\backend\controllers\SiteController.php(82): common\models\LoginForm->login()
+#22 [internal function]: backend\controllers\SiteController->actionLogin()
+#23 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#25 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#26 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#27 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1049
+    [2] => Unknown database 'yii2advanced21'
+)
+
+2022-12-05 22:23:38 [::1][-][8oj0t2u7ba4gmr754br62rjvlm][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'IuvSrOYuAtyKS7at6b9Atd9GwKEb0RYKqJwwLW89sVNrmJzAtGhOtNo9gZSvjAnguw-w0Wieb2_s_gJuK1fANg=='
+    'LoginForm' => [
+        'username' => 'root'
+        'password' => 'rootroot'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+>>>>>>> Rama_LuisLlanes
 
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     '_ga' => 'GA1.1.126481042.1650129790'
     'PHPSESSID' => 'd3cgcecruuj7e2313lkhrb91ri'
     'advanced-frontend' => '1ela9ialj3i9nv5q5e2sndekot'
@@ -31057,40 +31288,75 @@ $_COOKIE = [
     'advanced-backend' => 'tash5dk19bnkeceov1gdmdas32'
     '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
     '_csrf-backend' => '2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7\";}'
+=======
+    '_csrf-backend' => '8129a0f75e8857360e3a7c5327378020885614d86855197dfb0bbb9ad0926bb1a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"IsNlRFLhPv79F3IUdIppsOyeDb2CDjqe\";}'
+    'advanced-backend' => 'hqksroav9td5o5mg2d9o21dvkb'
+>>>>>>> Rama_LuisLlanes
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__returnUrl' => 'http://localhost/secwebyii/backend/web/'
     '__id' => 9
     '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+=======
+    '__returnUrl' => 'http://localhost/secweb/backend/web/'
+>>>>>>> Rama_LuisLlanes
 ]
 
 $_SERVER = [
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
     'HTTP_SEC_CH_UA_MOBILE' => '?0'
     'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.62'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+=======
+    'CONTENT_LENGTH' => '238'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+>>>>>>> Rama_LuisLlanes
     'HTTP_SEC_FETCH_SITE' => 'same-origin'
     'HTTP_SEC_FETCH_MODE' => 'navigate'
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_SEC_FETCH_DEST' => 'document'
+<<<<<<< HEAD
     'HTTP_REFERER' => 'http://localhost/secweb_project/backend/web/'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
     'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5'
     'HTTP_COOKIE' => '_ga=GA1.1.126481042.1650129790; PHPSESSID=d3cgcecruuj7e2313lkhrb91ri; advanced-frontend=1ela9ialj3i9nv5q5e2sndekot; _identity-frontend=9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-frontend=3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq%22%3B%7D; advanced-backend=tash5dk19bnkeceov1gdmdas32; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7%22%3B%7D'
     'PATH' => 'C:\\Program Files\\Rockwell Software\\RSCommon;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\wamp64\\bin\\php\\php5.6.40;C:\\composer;C:\\apache-svn\\bin;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+=======
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => '_csrf-backend=8129a0f75e8857360e3a7c5327378020885614d86855197dfb0bbb9ad0926bb1a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22IsNlRFLhPv79F3IUdIppsOyeDb2CDjqe%22%3B%7D; advanced-backend=hqksroav9td5o5mg2d9o21dvkb'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\apache-svn\\bin;C:\\Program Files\\Git\\cmd;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+>>>>>>> Rama_LuisLlanes
     'SystemRoot' => 'C:\\windows'
     'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\windows'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.4.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.4.9'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+>>>>>>> Rama_LuisLlanes
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
@@ -31100,6 +31366,7 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
     'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+<<<<<<< HEAD
     'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb_project/backend/web/index.php'
     'REMOTE_PORT' => '62624'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
@@ -31126,6 +31393,35 @@ Stack trace:
 #2 {main}
 2022-12-05 22:35:40 [::1][9][tash5dk19bnkeceov1gdmdas32][info][application] $_GET = [
     'r' => 'clientes/index'
+=======
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '59412'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670279018.8183
+    'REQUEST_TIME' => 1670279018
+]
+2022-12-05 22:44:25 [::1][9][jcfhucpbg2b17pb2s7iv2oubau][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/ciclo in C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php:152
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('ciclo', Array)
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/ciclo', Array)
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-12-05 22:44:25 [::1][9][jcfhucpbg2b17pb2s7iv2oubau][info][application] $_GET = [
+    'r' => 'site/ciclo'
+>>>>>>> Rama_LuisLlanes
 ]
 
 $_POST = []
@@ -31133,6 +31429,7 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     '_ga' => 'GA1.1.126481042.1650129790'
     'PHPSESSID' => 'd3cgcecruuj7e2313lkhrb91ri'
     'advanced-frontend' => '1ela9ialj3i9nv5q5e2sndekot'
@@ -31141,11 +31438,20 @@ $_COOKIE = [
     'advanced-backend' => 'tash5dk19bnkeceov1gdmdas32'
     '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
     '_csrf-backend' => '2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7\";}'
+=======
+    'advanced-backend' => 'jcfhucpbg2b17pb2s7iv2oubau'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => 'cc8388d245b5e983c0eb97ac0f793a288e3a9e534aeeb1e46bacf32859d53b85a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Cgs6RSTd9PSnLLDqUfu--VlmChdDWhHr\";}'
+>>>>>>> Rama_LuisLlanes
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__returnUrl' => 'http://localhost/secwebyii/backend/web/'
+=======
+    '__returnUrl' => 'http://localhost/secweb/backend/web/'
+>>>>>>> Rama_LuisLlanes
     '__id' => 9
     '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
 ]
@@ -31153,28 +31459,51 @@ $_SESSION = [
 $_SERVER = [
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
     'HTTP_SEC_CH_UA_MOBILE' => '?0'
     'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.62'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+=======
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+>>>>>>> Rama_LuisLlanes
     'HTTP_SEC_FETCH_SITE' => 'same-origin'
     'HTTP_SEC_FETCH_MODE' => 'navigate'
     'HTTP_SEC_FETCH_USER' => '?1'
     'HTTP_SEC_FETCH_DEST' => 'document'
+<<<<<<< HEAD
     'HTTP_REFERER' => 'http://localhost/secweb_project/backend/web/'
     'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
     'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5'
     'HTTP_COOKIE' => '_ga=GA1.1.126481042.1650129790; PHPSESSID=d3cgcecruuj7e2313lkhrb91ri; advanced-frontend=1ela9ialj3i9nv5q5e2sndekot; _identity-frontend=9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-frontend=3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq%22%3B%7D; advanced-backend=tash5dk19bnkeceov1gdmdas32; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7%22%3B%7D'
     'PATH' => 'C:\\Program Files\\Rockwell Software\\RSCommon;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\wamp64\\bin\\php\\php5.6.40;C:\\composer;C:\\apache-svn\\bin;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+=======
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=jcfhucpbg2b17pb2s7iv2oubau; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=cc8388d245b5e983c0eb97ac0f793a288e3a9e534aeeb1e46bacf32859d53b85a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Cgs6RSTd9PSnLLDqUfu--VlmChdDWhHr%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\apache-svn\\bin;C:\\Program Files\\Git\\cmd;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+>>>>>>> Rama_LuisLlanes
     'SystemRoot' => 'C:\\windows'
     'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\windows'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.4.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.4.9'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+>>>>>>> Rama_LuisLlanes
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
@@ -31184,6 +31513,7 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
     'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+<<<<<<< HEAD
     'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb_project/backend/web/index.php'
     'REMOTE_PORT' => '62707'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
@@ -31210,6 +31540,35 @@ Stack trace:
 #2 {main}
 2022-12-05 22:43:37 [::1][9][tash5dk19bnkeceov1gdmdas32][info][application] $_GET = [
     'r' => 'alumnos'
+=======
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '59615'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fciclo'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=site%2Fciclo'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670280265.4396
+    'REQUEST_TIME' => 1670280265
+]
+2022-12-05 22:45:14 [::1][9][jcfhucpbg2b17pb2s7iv2oubau][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/ciclo in C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php:152
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('ciclo', Array)
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/ciclo', Array)
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-12-05 22:45:14 [::1][9][jcfhucpbg2b17pb2s7iv2oubau][info][application] $_GET = [
+    'r' => 'site/ciclo'
+>>>>>>> Rama_LuisLlanes
 ]
 
 $_POST = []
@@ -31217,6 +31576,7 @@ $_POST = []
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     '_ga' => 'GA1.1.126481042.1650129790'
     'PHPSESSID' => 'd3cgcecruuj7e2313lkhrb91ri'
     'advanced-frontend' => '1ela9ialj3i9nv5q5e2sndekot'
@@ -31225,11 +31585,20 @@ $_COOKIE = [
     'advanced-backend' => 'tash5dk19bnkeceov1gdmdas32'
     '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
     '_csrf-backend' => '2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7\";}'
+=======
+    'advanced-backend' => 'jcfhucpbg2b17pb2s7iv2oubau'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => 'cc8388d245b5e983c0eb97ac0f793a288e3a9e534aeeb1e46bacf32859d53b85a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Cgs6RSTd9PSnLLDqUfu--VlmChdDWhHr\";}'
+>>>>>>> Rama_LuisLlanes
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__returnUrl' => 'http://localhost/secwebyii/backend/web/'
+=======
+    '__returnUrl' => 'http://localhost/secweb/backend/web/'
+>>>>>>> Rama_LuisLlanes
     '__id' => 9
     '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
 ]
@@ -31237,6 +31606,7 @@ $_SESSION = [
 $_SERVER = [
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+<<<<<<< HEAD
     'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
     'HTTP_SEC_CH_UA_MOBILE' => '?0'
     'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
@@ -31251,13 +31621,35 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5'
     'HTTP_COOKIE' => '_ga=GA1.1.126481042.1650129790; PHPSESSID=d3cgcecruuj7e2313lkhrb91ri; advanced-frontend=1ela9ialj3i9nv5q5e2sndekot; _identity-frontend=9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-frontend=3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq%22%3B%7D; advanced-backend=tash5dk19bnkeceov1gdmdas32; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7%22%3B%7D'
     'PATH' => 'C:\\Program Files\\Rockwell Software\\RSCommon;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\wamp64\\bin\\php\\php5.6.40;C:\\composer;C:\\apache-svn\\bin;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+=======
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=jcfhucpbg2b17pb2s7iv2oubau; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=cc8388d245b5e983c0eb97ac0f793a288e3a9e534aeeb1e46bacf32859d53b85a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Cgs6RSTd9PSnLLDqUfu--VlmChdDWhHr%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\apache-svn\\bin;C:\\Program Files\\Git\\cmd;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+>>>>>>> Rama_LuisLlanes
     'SystemRoot' => 'C:\\windows'
     'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\windows'
+<<<<<<< HEAD
     'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.4.9 Server at localhost Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.4.9'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+>>>>>>> Rama_LuisLlanes
     'SERVER_NAME' => 'localhost'
     'SERVER_ADDR' => '::1'
     'SERVER_PORT' => '80'
@@ -31267,6 +31659,7 @@ $_SERVER = [
     'CONTEXT_PREFIX' => ''
     'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
     'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+<<<<<<< HEAD
     'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb_project/backend/web/index.php'
     'REMOTE_PORT' => '62373'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
@@ -31278,4 +31671,97 @@ $_SERVER = [
     'PHP_SELF' => '/secweb_project/backend/web/index.php'
     'REQUEST_TIME_FLOAT' => 1670280217.4375
     'REQUEST_TIME' => 1670280217
+=======
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '59628'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fciclo'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=site%2Fciclo'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670280314.2013
+    'REQUEST_TIME' => 1670280314
+]
+2022-12-05 22:45:17 [::1][9][jcfhucpbg2b17pb2s7iv2oubau][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/ciclo in C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php:152
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('ciclo', Array)
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/ciclo', Array)
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-12-05 22:45:17 [::1][9][jcfhucpbg2b17pb2s7iv2oubau][info][application] $_GET = [
+    'r' => 'site/ciclo'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'jcfhucpbg2b17pb2s7iv2oubau'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => 'cc8388d245b5e983c0eb97ac0f793a288e3a9e534aeeb1e46bacf32859d53b85a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"Cgs6RSTd9PSnLLDqUfu--VlmChdDWhHr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secweb/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'advanced-backend=jcfhucpbg2b17pb2s7iv2oubau; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=cc8388d245b5e983c0eb97ac0f793a288e3a9e534aeeb1e46bacf32859d53b85a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22Cgs6RSTd9PSnLLDqUfu--VlmChdDWhHr%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\apache-svn\\bin;C:\\Program Files\\Git\\cmd;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '59627'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fciclo'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=site%2Fciclo'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670280317.5936
+    'REQUEST_TIME' => 1670280317
+>>>>>>> Rama_LuisLlanes
 ]
