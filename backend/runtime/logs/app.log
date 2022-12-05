@@ -30864,3 +30864,1099 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1654565216.321
     'REQUEST_TIME' => 1654565216
 ]
+2022-12-05 22:17:57 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced21' in C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#12 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#16 C:\wamp64\www\secweb\common\models\User.php(72): yii\db\BaseActiveRecord::findOne(Array)
+#17 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\User.php(602): common\models\User::findIdentity(11)
+#18 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#19 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\User.php(726): yii\web\User->loginByCookie()
+#20 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\User.php(199): yii\web\User->renewAuthStatus()
+#21 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\User.php(367): yii\web\User->getIdentity()
+#22 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Component.php(140): yii\web\User->getIsGuest()
+#23 C:\wamp64\www\secweb\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(83): yii\base\Component->__get('isGuest')
+#24 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#25 [internal function]: yii\base\BaseObject->__construct(Array)
+#26 C:\wamp64\www\secweb\vendor\yiisoft\yii2\di\Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#27 C:\wamp64\www\secweb\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#28 C:\wamp64\www\secweb\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#29 C:\wamp64\www\secweb\vendor\yiisoft\yii2-debug\src\Module.php(255): yii\BaseYii::createObject(Array)
+#30 C:\wamp64\www\secweb\vendor\yiisoft\yii2-debug\src\Module.php(226): yii\debug\Module->initPanels()
+#31 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#32 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#33 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#34 C:\wamp64\www\secweb\vendor\yiisoft\yii2\di\Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#35 C:\wamp64\www\secweb\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#36 C:\wamp64\www\secweb\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#37 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#38 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#39 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(70): yii\base\Application->bootstrap()
+#40 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#41 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#42 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#43 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->__construct('[<span class="s...')
+#44 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced21' in C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#10 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#14 C:\wamp64\www\secweb\common\models\User.php(72): yii\db\BaseActiveRecord::findOne(Array)
+#15 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\User.php(602): common\models\User::findIdentity(11)
+#16 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#17 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\User.php(726): yii\web\User->loginByCookie()
+#18 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\User.php(199): yii\web\User->renewAuthStatus()
+#19 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\User.php(367): yii\web\User->getIdentity()
+#20 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Component.php(140): yii\web\User->getIsGuest()
+#21 C:\wamp64\www\secweb\vendor\yiisoft\yii2-debug\src\panels\UserPanel.php(83): yii\base\Component->__get('isGuest')
+#22 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#23 [internal function]: yii\base\BaseObject->__construct(Array)
+#24 C:\wamp64\www\secweb\vendor\yiisoft\yii2\di\Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#25 C:\wamp64\www\secweb\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#26 C:\wamp64\www\secweb\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#27 C:\wamp64\www\secweb\vendor\yiisoft\yii2-debug\src\Module.php(255): yii\BaseYii::createObject(Array)
+#28 C:\wamp64\www\secweb\vendor\yiisoft\yii2-debug\src\Module.php(226): yii\debug\Module->initPanels()
+#29 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\debug\Module->init()
+#30 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(158): yii\base\BaseObject->__construct(Array)
+#31 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#32 C:\wamp64\www\secweb\vendor\yiisoft\yii2\di\Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#33 C:\wamp64\www\secweb\vendor\yiisoft\yii2\di\Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#34 C:\wamp64\www\secweb\vendor\yiisoft\yii2\BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#35 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(427): yii\BaseYii::createObject(Array, Array)
+#36 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(321): yii\base\Module->getModule('debug')
+#37 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(70): yii\base\Application->bootstrap()
+#38 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(279): yii\web\Application->bootstrap()
+#39 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\base\Application->init()
+#40 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(212): yii\base\BaseObject->__construct(Array)
+#41 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->__construct('[<span class="s...')
+#42 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1049
+    [2] => Unknown database 'yii2advanced21'
+)
+
+2022-12-05 22:17:56 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => 'd600c55f299a59a4e603edaf6442064e3340277aed8ba452a5434fabbd9d45faa:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"7YnS39lgho-c2_y7LIUr75Ow2fM2k2f9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-US,es-419;q=0.9,es;q=0.8'
+    'HTTP_COOKIE' => '_identity-backend=d600c55f299a59a4e603edaf6442064e3340277aed8ba452a5434fabbd9d45faa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%227YnS39lgho-c2_y7LIUr75Ow2fM2k2f9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Apache-svn\\bin;D:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '61301'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/secweb/backend/web/'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670278676.4893
+    'REQUEST_TIME' => 1670278676
+]
+2022-12-05 22:23:47 [::1][9][35gafsj3e66ak1tsv8m4n93gbj][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: backend\models\search\UserSearch::rol_id in C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Component.php:155
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('rol_id')
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\validators\Validator.php(258): yii\db\BaseActiveRecord->__get('rol_id')
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(backend\models\search\UserSearch), Array)
+#3 C:\wamp64\www\secweb\backend\models\search\UserSearch.php(53): yii\base\Model->validate()
+#4 C:\wamp64\www\secweb\backend\controllers\UserController.php(41): backend\models\search\UserSearch->search(Array)
+#5 [internal function]: backend\controllers\UserController->actionIndex()
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('index', Array)
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user/index', Array)
+#10 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2022-12-05 22:23:47 [::1][9][35gafsj3e66ak1tsv8m4n93gbj][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '35gafsj3e66ak1tsv8m4n93gbj'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '1aa95634b0423f04a1141e08a74c9aeea8c768c2d6551ba3efd53a3dbd6915f9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9Gh7xKPCKntE1iFADZe5bhJutrP32fu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secweb/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-US,es-419;q=0.9,es;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=35gafsj3e66ak1tsv8m4n93gbj; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=1aa95634b0423f04a1141e08a74c9aeea8c768c2d6551ba3efd53a3dbd6915f9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9Gh7xKPCKntE1iFADZe5bhJutrP32fu%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Apache-svn\\bin;D:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '61477'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Findex'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=user%2Findex'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670279027.069
+    'REQUEST_TIME' => 1670279027
+]
+2022-12-05 22:24:00 [::1][9][35gafsj3e66ak1tsv8m4n93gbj][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: backend\models\search\UserSearch::rol_id in C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Component.php:155
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('rol_id')
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\validators\Validator.php(258): yii\db\BaseActiveRecord->__get('rol_id')
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(backend\models\search\UserSearch), Array)
+#3 C:\wamp64\www\secweb\backend\models\search\UserSearch.php(53): yii\base\Model->validate()
+#4 C:\wamp64\www\secweb\backend\controllers\UserController.php(41): backend\models\search\UserSearch->search(Array)
+#5 [internal function]: backend\controllers\UserController->actionIndex()
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('index', Array)
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user/index', Array)
+#10 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2022-12-05 22:24:00 [::1][9][35gafsj3e66ak1tsv8m4n93gbj][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '35gafsj3e66ak1tsv8m4n93gbj'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '1aa95634b0423f04a1141e08a74c9aeea8c768c2d6551ba3efd53a3dbd6915f9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9Gh7xKPCKntE1iFADZe5bhJutrP32fu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secweb/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=rol%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-US,es-419;q=0.9,es;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=35gafsj3e66ak1tsv8m4n93gbj; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=1aa95634b0423f04a1141e08a74c9aeea8c768c2d6551ba3efd53a3dbd6915f9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9Gh7xKPCKntE1iFADZe5bhJutrP32fu%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Apache-svn\\bin;D:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '61492'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Findex'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=user%2Findex'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670279040.4409
+    'REQUEST_TIME' => 1670279040
+]
+2022-12-05 22:24:05 [::1][9][35gafsj3e66ak1tsv8m4n93gbj][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: backend\models\search\UserSearch::rol_id in C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Component.php:155
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('rol_id')
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\validators\Validator.php(258): yii\db\BaseActiveRecord->__get('rol_id')
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(backend\models\search\UserSearch), Array)
+#3 C:\wamp64\www\secweb\backend\models\search\UserSearch.php(53): yii\base\Model->validate()
+#4 C:\wamp64\www\secweb\backend\controllers\UserController.php(41): backend\models\search\UserSearch->search(Array)
+#5 [internal function]: backend\controllers\UserController->actionIndex()
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('index', Array)
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user/index', Array)
+#10 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2022-12-05 22:24:05 [::1][9][35gafsj3e66ak1tsv8m4n93gbj][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '35gafsj3e66ak1tsv8m4n93gbj'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '1aa95634b0423f04a1141e08a74c9aeea8c768c2d6551ba3efd53a3dbd6915f9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9Gh7xKPCKntE1iFADZe5bhJutrP32fu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secweb/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=rol%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-US,es-419;q=0.9,es;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=35gafsj3e66ak1tsv8m4n93gbj; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=1aa95634b0423f04a1141e08a74c9aeea8c768c2d6551ba3efd53a3dbd6915f9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9Gh7xKPCKntE1iFADZe5bhJutrP32fu%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Apache-svn\\bin;D:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '61486'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Findex'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=user%2Findex'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670279045.9037
+    'REQUEST_TIME' => 1670279045
+]
+2022-12-05 22:24:30 [::1][9][35gafsj3e66ak1tsv8m4n93gbj][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "clientes/index". in C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('clientes/index', Array)
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-12-05 22:24:30 [::1][9][35gafsj3e66ak1tsv8m4n93gbj][info][application] $_GET = [
+    'r' => 'clientes/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '35gafsj3e66ak1tsv8m4n93gbj'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '1aa95634b0423f04a1141e08a74c9aeea8c768c2d6551ba3efd53a3dbd6915f9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9Gh7xKPCKntE1iFADZe5bhJutrP32fu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secweb/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=rol%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-US,es-419;q=0.9,es;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=35gafsj3e66ak1tsv8m4n93gbj; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=1aa95634b0423f04a1141e08a74c9aeea8c768c2d6551ba3efd53a3dbd6915f9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9Gh7xKPCKntE1iFADZe5bhJutrP32fu%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Apache-svn\\bin;D:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '61521'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Findex'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=clientes%2Findex'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670279070.0053
+    'REQUEST_TIME' => 1670279070
+]
+2022-12-05 22:24:32 [::1][9][35gafsj3e66ak1tsv8m4n93gbj][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "clientes/index". in C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('clientes/index', Array)
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-12-05 22:24:32 [::1][9][35gafsj3e66ak1tsv8m4n93gbj][info][application] $_GET = [
+    'r' => 'clientes/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '35gafsj3e66ak1tsv8m4n93gbj'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '1aa95634b0423f04a1141e08a74c9aeea8c768c2d6551ba3efd53a3dbd6915f9a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"G9Gh7xKPCKntE1iFADZe5bhJutrP32fu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secweb/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=clientes%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-US,es-419;q=0.9,es;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=35gafsj3e66ak1tsv8m4n93gbj; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=1aa95634b0423f04a1141e08a74c9aeea8c768c2d6551ba3efd53a3dbd6915f9a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22G9Gh7xKPCKntE1iFADZe5bhJutrP32fu%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Apache-svn\\bin;D:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '61536'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Findex'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=clientes%2Findex'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670279072.896
+    'REQUEST_TIME' => 1670279072
+]
+2022-12-05 22:43:14 [::1][9][9gqejq7g3f859pmvhotn76a3or][error][Error] Error: Class 'backend\models\Maestros' not found in C:\wamp64\www\secweb\backend\models\Materias.php:40
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(465): backend\models\Materias->rules()
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(421): yii\base\Model->createValidators()
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(190): yii\base\Model->getValidators()
+#3 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(795): yii\base\Model->scenarios()
+#4 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\generators\crud\default\views\_form.php(11): yii\base\Model->safeAttributes()
+#5 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\View.php(348): require('C:\\wamp64\\www\\s...')
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\s...', Array)
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\Generator.php(317): yii\base\View->renderFile('C:\\wamp64\\www\\s...', Array, Object(yii\gii\generators\crud\Generator))
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\generators\crud\Generator.php(204): yii\gii\Generator->render('views/_form.php')
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(61): yii\gii\generators\crud\Generator->generate()
+#10 [internal function]: yii\gii\controllers\DefaultController->actionView('crud')
+#11 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#13 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#14 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('gii/default/vie...', Array)
+#15 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+2022-12-05 22:43:14 [::1][9][9gqejq7g3f859pmvhotn76a3or][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'crud'
+]
+
+$_POST = [
+    '_csrf-backend' => 'RTt_oeZyWfSj7nTUMQnw6lvTL6nmMyC3R_VZ5wz3D8I8XBrn1gEszOGhP-FbMLunC7J5zYNESs4dnBWqY60inQ=='
+    'Generator' => [
+        'modelClass' => 'backend\\models\\Materias'
+        'searchModelClass' => 'backend\\models\\search\\MateriasSearch'
+        'controllerClass' => 'backend\\controllers\\MateriasController'
+        'viewPath' => ''
+        'baseControllerClass' => 'yii\\web\\Controller'
+        'indexWidgetType' => 'grid'
+        'enableI18N' => '0'
+        'enablePjax' => '0'
+        'messageCategory' => 'app'
+        'template' => 'default'
+    ]
+    'preview' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '9gqejq7g3f859pmvhotn76a3or'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '840505941137f4427d43e204c9ffa302839461a33554ed9718d4bd04ae2ed68da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ygeF0su8BOK5j9KMPaVdewjyZiLMoZ-_\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secweb/backend/web/index.php'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '560'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-US,es-419;q=0.9,es;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=9gqejq7g3f859pmvhotn76a3or; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=840505941137f4427d43e204c9ffa302839461a33554ed9718d4bd04ae2ed68da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ygeF0su8BOK5j9KMPaVdewjyZiLMoZ-_%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Apache-svn\\bin;D:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '61760'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670280194.4796
+    'REQUEST_TIME' => 1670280194
+]
+2022-12-05 22:43:48 [::1][9][9gqejq7g3f859pmvhotn76a3or][error][Error] Error: Class 'backend\models\Maestros' not found in C:\wamp64\www\secweb\backend\models\Materias.php:41
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(465): backend\models\Materias->rules()
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(421): yii\base\Model->createValidators()
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(190): yii\base\Model->getValidators()
+#3 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(795): yii\base\Model->scenarios()
+#4 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\generators\crud\default\views\_form.php(11): yii\base\Model->safeAttributes()
+#5 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\View.php(348): require('C:\\wamp64\\www\\s...')
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\s...', Array)
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\Generator.php(317): yii\base\View->renderFile('C:\\wamp64\\www\\s...', Array, Object(yii\gii\generators\crud\Generator))
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\generators\crud\Generator.php(204): yii\gii\Generator->render('views/_form.php')
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(61): yii\gii\generators\crud\Generator->generate()
+#10 [internal function]: yii\gii\controllers\DefaultController->actionView('crud')
+#11 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#13 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#14 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('gii/default/vie...', Array)
+#15 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+2022-12-05 22:43:48 [::1][9][9gqejq7g3f859pmvhotn76a3or][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'crud'
+]
+
+$_POST = [
+    '_csrf-backend' => 'RTt_oeZyWfSj7nTUMQnw6lvTL6nmMyC3R_VZ5wz3D8I8XBrn1gEszOGhP-FbMLunC7J5zYNESs4dnBWqY60inQ=='
+    'Generator' => [
+        'modelClass' => 'backend\\models\\Materias'
+        'searchModelClass' => 'backend\\models\\search\\MateriasSearch'
+        'controllerClass' => 'backend\\controllers\\MateriasController'
+        'viewPath' => ''
+        'baseControllerClass' => 'yii\\web\\Controller'
+        'indexWidgetType' => 'grid'
+        'enableI18N' => '0'
+        'enablePjax' => '0'
+        'messageCategory' => 'app'
+        'template' => 'default'
+    ]
+    'preview' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '9gqejq7g3f859pmvhotn76a3or'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '840505941137f4427d43e204c9ffa302839461a33554ed9718d4bd04ae2ed68da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ygeF0su8BOK5j9KMPaVdewjyZiLMoZ-_\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secweb/backend/web/index.php'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '560'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-US,es-419;q=0.9,es;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=9gqejq7g3f859pmvhotn76a3or; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=840505941137f4427d43e204c9ffa302839461a33554ed9718d4bd04ae2ed68da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ygeF0su8BOK5j9KMPaVdewjyZiLMoZ-_%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Apache-svn\\bin;D:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '61773'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670280228.4832
+    'REQUEST_TIME' => 1670280228
+]
+2022-12-05 22:49:28 [::1][9][9gqejq7g3f859pmvhotn76a3or][error][Error] Error: Class 'backend\models\Maestros' not found in C:\wamp64\www\secweb\backend\models\Materias.php:41
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(465): backend\models\Materias->rules()
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(421): yii\base\Model->createValidators()
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(190): yii\base\Model->getValidators()
+#3 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(795): yii\base\Model->scenarios()
+#4 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\generators\crud\default\views\_form.php(11): yii\base\Model->safeAttributes()
+#5 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\View.php(348): require('C:\\wamp64\\www\\s...')
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\s...', Array)
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\Generator.php(317): yii\base\View->renderFile('C:\\wamp64\\www\\s...', Array, Object(yii\gii\generators\crud\Generator))
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\generators\crud\Generator.php(204): yii\gii\Generator->render('views/_form.php')
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(61): yii\gii\generators\crud\Generator->generate()
+#10 [internal function]: yii\gii\controllers\DefaultController->actionView('crud')
+#11 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#13 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#14 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('gii/default/vie...', Array)
+#15 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+2022-12-05 22:49:28 [::1][9][9gqejq7g3f859pmvhotn76a3or][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'crud'
+]
+
+$_POST = [
+    '_csrf-backend' => 'FSicinarVn12KL-DvlhFn78H1UjY2F4xFJZCtryfSStsT_nMRtgjRTRn9LbUYQ7S72aDLL2vNEhO_w7708VkdA=='
+    'Generator' => [
+        'modelClass' => 'backend\\models\\Materias'
+        'searchModelClass' => 'backend\\models\\search\\MateriasSearch'
+        'controllerClass' => 'backend\\controllers\\MateriasController'
+        'viewPath' => ''
+        'baseControllerClass' => 'yii\\web\\Controller'
+        'indexWidgetType' => 'grid'
+        'enableI18N' => '0'
+        'enablePjax' => '0'
+        'messageCategory' => 'app'
+        'template' => 'default'
+    ]
+    'preview' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '9gqejq7g3f859pmvhotn76a3or'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '840505941137f4427d43e204c9ffa302839461a33554ed9718d4bd04ae2ed68da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ygeF0su8BOK5j9KMPaVdewjyZiLMoZ-_\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secweb/backend/web/index.php'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '560'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-US,es-419;q=0.9,es;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=9gqejq7g3f859pmvhotn76a3or; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=840505941137f4427d43e204c9ffa302839461a33554ed9718d4bd04ae2ed68da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ygeF0su8BOK5j9KMPaVdewjyZiLMoZ-_%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Apache-svn\\bin;D:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '61899'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670280568.4629
+    'REQUEST_TIME' => 1670280568
+]
+2022-12-05 22:49:38 [::1][9][9gqejq7g3f859pmvhotn76a3or][error][Error] Error: Class 'backend\models\Maestros' not found in C:\wamp64\www\secweb\backend\models\Materias.php:41
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(465): backend\models\Materias->rules()
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(421): yii\base\Model->createValidators()
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(190): yii\base\Model->getValidators()
+#3 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(795): yii\base\Model->scenarios()
+#4 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\generators\crud\default\views\_form.php(11): yii\base\Model->safeAttributes()
+#5 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\View.php(348): require('C:\\wamp64\\www\\s...')
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\s...', Array)
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\Generator.php(317): yii\base\View->renderFile('C:\\wamp64\\www\\s...', Array, Object(yii\gii\generators\crud\Generator))
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\generators\crud\Generator.php(204): yii\gii\Generator->render('views/_form.php')
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(61): yii\gii\generators\crud\Generator->generate()
+#10 [internal function]: yii\gii\controllers\DefaultController->actionView('crud')
+#11 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#13 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#14 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('gii/default/vie...', Array)
+#15 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+2022-12-05 22:49:38 [::1][9][9gqejq7g3f859pmvhotn76a3or][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'crud'
+]
+
+$_POST = [
+    '_csrf-backend' => 'FSicinarVn12KL-DvlhFn78H1UjY2F4xFJZCtryfSStsT_nMRtgjRTRn9LbUYQ7S72aDLL2vNEhO_w7708VkdA=='
+    'Generator' => [
+        'modelClass' => 'backend\\models\\Materias'
+        'searchModelClass' => 'backend\\models\\search\\MateriasSearch'
+        'controllerClass' => 'backend\\controllers\\MateriasController'
+        'viewPath' => ''
+        'baseControllerClass' => 'yii\\web\\Controller'
+        'indexWidgetType' => 'grid'
+        'enableI18N' => '0'
+        'enablePjax' => '0'
+        'messageCategory' => 'app'
+        'template' => 'default'
+    ]
+    'preview' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '9gqejq7g3f859pmvhotn76a3or'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '840505941137f4427d43e204c9ffa302839461a33554ed9718d4bd04ae2ed68da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ygeF0su8BOK5j9KMPaVdewjyZiLMoZ-_\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secweb/backend/web/index.php'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '560'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-US,es-419;q=0.9,es;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=9gqejq7g3f859pmvhotn76a3or; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=840505941137f4427d43e204c9ffa302839461a33554ed9718d4bd04ae2ed68da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ygeF0su8BOK5j9KMPaVdewjyZiLMoZ-_%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Apache-svn\\bin;D:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '61907'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670280578.2278
+    'REQUEST_TIME' => 1670280578
+]
+2022-12-05 22:49:44 [::1][9][9gqejq7g3f859pmvhotn76a3or][error][Error] Error: Class 'backend\models\Maestros' not found in C:\wamp64\www\secweb\backend\models\Materias.php:40
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(465): backend\models\Materias->rules()
+#1 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(421): yii\base\Model->createValidators()
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(190): yii\base\Model->getValidators()
+#3 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Model.php(795): yii\base\Model->scenarios()
+#4 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\generators\crud\default\views\_form.php(11): yii\base\Model->safeAttributes()
+#5 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\View.php(348): require('C:\\wamp64\\www\\s...')
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\s...', Array)
+#7 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\Generator.php(317): yii\base\View->renderFile('C:\\wamp64\\www\\s...', Array, Object(yii\gii\generators\crud\Generator))
+#8 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\generators\crud\Generator.php(204): yii\gii\Generator->render('views/_form.php')
+#9 C:\wamp64\www\secweb\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(61): yii\gii\generators\crud\Generator->generate()
+#10 [internal function]: yii\gii\controllers\DefaultController->actionView('crud')
+#11 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#13 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('view', Array)
+#14 C:\wamp64\www\secweb\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('gii/default/vie...', Array)
+#15 C:\wamp64\www\secweb\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\wamp64\www\secweb\backend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+2022-12-05 22:49:44 [::1][9][9gqejq7g3f859pmvhotn76a3or][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'crud'
+]
+
+$_POST = [
+    '_csrf-backend' => 'FSicinarVn12KL-DvlhFn78H1UjY2F4xFJZCtryfSStsT_nMRtgjRTRn9LbUYQ7S72aDLL2vNEhO_w7708VkdA=='
+    'Generator' => [
+        'modelClass' => 'backend\\models\\Materias'
+        'searchModelClass' => 'backend\\models\\search\\MateriasSearch'
+        'controllerClass' => 'backend\\controllers\\MateriasController'
+        'viewPath' => ''
+        'baseControllerClass' => 'yii\\web\\Controller'
+        'indexWidgetType' => 'grid'
+        'enableI18N' => '0'
+        'enablePjax' => '0'
+        'messageCategory' => 'app'
+        'template' => 'default'
+    ]
+    'preview' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '9gqejq7g3f859pmvhotn76a3or'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '840505941137f4427d43e204c9ffa302839461a33554ed9718d4bd04ae2ed68da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ygeF0su8BOK5j9KMPaVdewjyZiLMoZ-_\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secweb/backend/web/index.php'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '560'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-US,es-419;q=0.9,es;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=9gqejq7g3f859pmvhotn76a3or; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=840505941137f4427d43e204c9ffa302839461a33554ed9718d4bd04ae2ed68da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ygeF0su8BOK5j9KMPaVdewjyZiLMoZ-_%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Apache-svn\\bin;D:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '61913'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670280584.3342
+    'REQUEST_TIME' => 1670280584
+]
