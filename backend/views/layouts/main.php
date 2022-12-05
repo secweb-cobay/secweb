@@ -39,10 +39,12 @@ AppAsset::register($this);
 
         $menuItems = [
             ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Alumnos', 'url' => ['/alumnos/index']],
         ];
 
         if (Yii::$app->user->isGuest) {
             $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+
         } else {
             $menuItems[] = [
                 'label' => 'Administración', 'url' => ['site/index'],
@@ -73,6 +75,10 @@ AppAsset::register($this);
                     ['label' => 'Dev/Compras', 'url' => ['clientes/index']],
                     ['label' => 'Dev/Ventas', 'url' => ['clientes/index']],
                 ],
+            ];
+
+            $menuItems[] = [
+                'label' => 'Ciclos', 'url' => ['ciclo/index']
             ];
 
             $menuItems[] = '<li>'
