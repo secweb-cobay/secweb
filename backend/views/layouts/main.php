@@ -75,6 +75,10 @@ AppAsset::register($this);
                 ],
             ];
 
+            $menuItems[] = [
+                'label' => 'Ciclos', 'url' => ['ciclo/index']
+            ];
+
             $menuItems[] = '<li>'
                 . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
                 . Html::submitButton(
