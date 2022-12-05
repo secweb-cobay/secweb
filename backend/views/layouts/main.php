@@ -39,42 +39,12 @@ AppAsset::register($this);
 
         $menuItems = [
             ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Alumnos', 'url' => ['/alumnos/index']],
         ];
 
         if (Yii::$app->user->isGuest) {
             $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-        } else {
-            $menuItems[] = [
-                'label' => 'Administración', 'url' => ['site/index'],
-                'options' => ['class' => 'dropdown'],
-                'template' => '<a href="{url}" class="href_class">{label}</a>',
-                'items' => [
-                    ['label' => 'Usuarios', 'url' => ['user/index']],
-                    
-                ],
-            ];
-            $menuItems[] = [
-                'label' => 'Catalogos', 'url' => ['site/index'],
-                'options' => ['class' => 'dropdown'],
-                'template' => '<a href="{url}" class="href_class">{label}</a>',
-                'items' => [
-                    ['label' => 'Roles', 'url' => ['rol/index']],
-                    ['label' => 'Clientes', 'url' => ['clientes/index']],
-                ],
-            ];
-
-            $menuItems[] = [
-                'label' => 'Movimientos', 'url' => ['site/index'],
-                'options' => ['class' => 'dropdown'],
-                'template' => '<a href="{url}" class="href_class">{label}</a>',
-                'items' => [
-                    ['label' => 'Ventas', 'url' => ['clientes/index']],
-                    ['label' => 'Compras', 'url' => ['clientes/index']],
-                    ['label' => 'Dev/Compras', 'url' => ['clientes/index']],
-                    ['label' => 'Dev/Ventas', 'url' => ['clientes/index']],
-                ],
-            ];
-
+        } else {    
             $menuItems[] = '<li>'
                 . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
                 . Html::submitButton(
