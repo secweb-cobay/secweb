@@ -34062,3 +34062,84 @@ $_SERVER = [
 >>>>>>> e128e791848b7f6daebffec27baf5a401040261b
 >>>>>>> d18901964f832f7e5287aba55ec4ef80df9069cf
 ]
+2022-12-06 00:21:19 [::1][9][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 163527 bytes' 
+
+in C:\wamp64\www\secweb\vendor\opis\closure\functions.php:36
+
+Stack trace:
+#0 C:\wamp64\www\secweb\vendor\opis\closure\functions.php(36): yii\web\ErrorHandler->handleError('8', ''unserialize():...', ''C:\\\\wamp64\\\\ww...', '36', '['data' => '<<<...')
+#1 C:\wamp64\www\secweb\vendor\opis\closure\functions.php(36): ::unserialize(''<<<<<<< HEAD\\r...')
+#2 C:\wamp64\www\secweb\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): ::Opis\Closure\unserialize(''<<<<<<< HEAD\\r...', '???')
+#3 C:\wamp64\www\secweb\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile(''C:\\\\wamp64\\\\ww...', '['tag' => '638e...')
+#4 C:\wamp64\www\secweb\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\wamp64\www\secweb\vendor\yiisoft\yii2\log\Dispatcher.php(194): yii\debug\LogTarget->collect('[]', 'TRUE')
+#6 C:\wamp64\www\secweb\vendor\yiisoft\yii2\log\Logger.php(227): yii\log\Dispatcher->dispatch('[]', 'TRUE')
+#7 {main}
+2022-12-06 00:21:19 [::1][9][-][info][application] $_GET = [
+    'r' => 'rol/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '9gqejq7g3f859pmvhotn76a3or'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '840505941137f4427d43e204c9ffa302839461a33554ed9718d4bd04ae2ed68da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ygeF0su8BOK5j9KMPaVdewjyZiLMoZ-_\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secweb/backend/web/index.php'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/secweb/backend/web/index.php?r=clientes%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-US,es-419;q=0.9,es;q=0.8'
+    'HTTP_COOKIE' => 'advanced-backend=9gqejq7g3f859pmvhotn76a3or; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=840505941137f4427d43e204c9ffa302839461a33554ed9718d4bd04ae2ed68da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ygeF0su8BOK5j9KMPaVdewjyZiLMoZ-_%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\Apache-svn\\bin;D:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/7.4.26 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/7.4.26'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb/backend/web/index.php'
+    'REMOTE_PORT' => '62725'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=rol%2Findex'
+    'REQUEST_URI' => '/secweb/backend/web/index.php?r=rol%2Findex'
+    'SCRIPT_NAME' => '/secweb/backend/web/index.php'
+    'PHP_SELF' => '/secweb/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670286079.3961
+    'REQUEST_TIME' => 1670286079
+]
