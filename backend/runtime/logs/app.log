@@ -34062,3 +34062,254 @@ $_SERVER = [
 >>>>>>> e128e791848b7f6daebffec27baf5a401040261b
 >>>>>>> d18901964f832f7e5287aba55ec4ef80df9069cf
 ]
+2022-12-06 00:05:38 [::1][9][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 163527 bytes' 
+
+in C:\wamp64\www\secweb_project\vendor\opis\closure\functions.php:36
+
+Stack trace:
+#0 C:\wamp64\www\secweb_project\vendor\opis\closure\functions.php(36): yii\web\ErrorHandler->handleError()
+#1 C:\wamp64\www\secweb_project\vendor\opis\closure\functions.php(36): ::unserialize()
+#2 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2-debug\src\LogTarget.php(105): ::Opis\Closure\unserialize()
+#3 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2-debug\src\LogTarget.php(80): yii\debug\LogTarget->updateIndexFile()
+#4 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2-debug\src\LogTarget.php(136): yii\debug\LogTarget->export()
+#5 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\log\Dispatcher.php(194): yii\debug\LogTarget->collect()
+#6 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\log\Logger.php(227): yii\log\Dispatcher->dispatch()
+#7 {main}
+2022-12-06 00:05:37 [::1][9][-][info][application] $_GET = [
+    'r' => 'maestros'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.126481042.1650129790'
+    'PHPSESSID' => 'd3cgcecruuj7e2313lkhrb91ri'
+    'advanced-frontend' => '1ela9ialj3i9nv5q5e2sndekot'
+    '_identity-frontend' => '9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-frontend' => '3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq\";}'
+    'advanced-backend' => 'tash5dk19bnkeceov1gdmdas32'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secwebyii/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.62'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5'
+    'HTTP_COOKIE' => '_ga=GA1.1.126481042.1650129790; PHPSESSID=d3cgcecruuj7e2313lkhrb91ri; advanced-frontend=1ela9ialj3i9nv5q5e2sndekot; _identity-frontend=9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-frontend=3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq%22%3B%7D; advanced-backend=tash5dk19bnkeceov1gdmdas32; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Rockwell Software\\RSCommon;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\wamp64\\bin\\php\\php5.6.40;C:\\composer;C:\\apache-svn\\bin;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.4.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb_project/backend/web/index.php'
+    'REMOTE_PORT' => '62868'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=maestros'
+    'REQUEST_URI' => '/secweb_project/backend/web/index.php?r=maestros'
+    'SCRIPT_NAME' => '/secweb_project/backend/web/index.php'
+    'PHP_SELF' => '/secweb_project/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670285137.194
+    'REQUEST_TIME' => 1670285137
+]
+2022-12-06 00:05:46 [::1][9][tash5dk19bnkeceov1gdmdas32][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "semstres". in C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('semstres', Array)
+#1 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\secweb_project\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\secweb_project\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-12-06 00:05:45 [::1][9][tash5dk19bnkeceov1gdmdas32][info][application] $_GET = [
+    'r' => 'semstres'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.126481042.1650129790'
+    'PHPSESSID' => 'd3cgcecruuj7e2313lkhrb91ri'
+    'advanced-frontend' => '1ela9ialj3i9nv5q5e2sndekot'
+    '_identity-frontend' => '9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-frontend' => '3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq\";}'
+    'advanced-backend' => 'tash5dk19bnkeceov1gdmdas32'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secwebyii/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.62'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5'
+    'HTTP_COOKIE' => '_ga=GA1.1.126481042.1650129790; PHPSESSID=d3cgcecruuj7e2313lkhrb91ri; advanced-frontend=1ela9ialj3i9nv5q5e2sndekot; _identity-frontend=9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-frontend=3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq%22%3B%7D; advanced-backend=tash5dk19bnkeceov1gdmdas32; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Rockwell Software\\RSCommon;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\wamp64\\bin\\php\\php5.6.40;C:\\composer;C:\\apache-svn\\bin;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.4.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb_project/backend/web/index.php'
+    'REMOTE_PORT' => '62879'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=semstres'
+    'REQUEST_URI' => '/secweb_project/backend/web/index.php?r=semstres'
+    'SCRIPT_NAME' => '/secweb_project/backend/web/index.php'
+    'PHP_SELF' => '/secweb_project/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670285145.5947
+    'REQUEST_TIME' => 1670285145
+]
+2022-12-06 00:05:51 [::1][9][tash5dk19bnkeceov1gdmdas32][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "semestres". in C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('semestres', Array)
+#1 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\secweb_project\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\wamp64\www\secweb_project\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\secweb_project\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-12-06 00:05:51 [::1][9][tash5dk19bnkeceov1gdmdas32][info][application] $_GET = [
+    'r' => 'semestres'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.126481042.1650129790'
+    'PHPSESSID' => 'd3cgcecruuj7e2313lkhrb91ri'
+    'advanced-frontend' => '1ela9ialj3i9nv5q5e2sndekot'
+    '_identity-frontend' => '9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-frontend' => '3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"7fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq\";}'
+    'advanced-backend' => 'tash5dk19bnkeceov1gdmdas32'
+    '_identity-backend' => 'b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[9,\"El4u2OFmro6HdVohznDGhv45RhYiBoe8\",2592000]\";}'
+    '_csrf-backend' => '2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/secwebyii/backend/web/'
+    '__id' => 9
+    '__authKey' => 'El4u2OFmro6HdVohznDGhv45RhYiBoe8'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Microsoft Edge\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.62'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5'
+    'HTTP_COOKIE' => '_ga=GA1.1.126481042.1650129790; PHPSESSID=d3cgcecruuj7e2313lkhrb91ri; advanced-frontend=1ela9ialj3i9nv5q5e2sndekot; _identity-frontend=9ccba06aa100479557c360b372407d8984eef54ffc2858e3c80c4986efdd40b1a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-frontend=3bb9a44aceec6b74c2d8ed9082c6010bd63b0effeec7103bd510856f6c5e30afa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%227fzj3UzPzDOfTq7ODVZD-mIjsaQVTBZq%22%3B%7D; advanced-backend=tash5dk19bnkeceov1gdmdas32; _identity-backend=b1c31074f5733041ca54013bddb1157bb89f3a0aab01fa1f2ff2e28c48902ccaa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B9%2C%22El4u2OFmro6HdVohznDGhv45RhYiBoe8%22%2C2592000%5D%22%3B%7D; _csrf-backend=2064e04504c33b18d2ba9aec1e82a2eaf00dca767b3fe68405069b33068c2a90a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22j3q58VBH4N_NdFlxtnfXTYHa4CSQHkz7%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Rockwell Software\\RSCommon;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\wamp64\\bin\\php\\php5.6.40;C:\\composer;C:\\apache-svn\\bin;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.4.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/secweb_project/backend/web/index.php'
+    'REMOTE_PORT' => '62883'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=semestres'
+    'REQUEST_URI' => '/secweb_project/backend/web/index.php?r=semestres'
+    'SCRIPT_NAME' => '/secweb_project/backend/web/index.php'
+    'PHP_SELF' => '/secweb_project/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1670285151.5856
+    'REQUEST_TIME' => 1670285151
+]

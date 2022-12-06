@@ -39,7 +39,6 @@ AppAsset::register($this);
 
         $menuItems = [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Alumnos', 'url' => ['/alumnos/index']],
         ];
 
         if (Yii::$app->user->isGuest) {
@@ -47,33 +46,29 @@ AppAsset::register($this);
 
         } else {
             $menuItems[] = [
-                'label' => 'Administración', 'url' => ['site/index'],
+                'label' => 'Materias', 'url' => ['site/index'],
                 'options' => ['class' => 'dropdown'],
                 'template' => '<a href="{url}" class="href_class">{label}</a>',
                 'items' => [
-                    ['label' => 'Usuarios', 'url' => ['user/index']],
+                    ['label' => 'Administrar materias', 'url' => ['user/index']],
                     
                 ],
             ];
             $menuItems[] = [
-                'label' => 'Catalogos', 'url' => ['site/index'],
+                'label' => 'Maestros', 'url' => ['site/index'],
                 'options' => ['class' => 'dropdown'],
                 'template' => '<a href="{url}" class="href_class">{label}</a>',
                 'items' => [
-                    ['label' => 'Roles', 'url' => ['rol/index']],
-                    ['label' => 'Clientes', 'url' => ['clientes/index']],
+                    ['label' => 'Administarar Maestros', 'url' => ['clientes/index']],
                 ],
             ];
 
             $menuItems[] = [
-                'label' => 'Movimientos', 'url' => ['site/index'],
+                'label' => 'Alumnos', 'url' => ['site/index'],
                 'options' => ['class' => 'dropdown'],
                 'template' => '<a href="{url}" class="href_class">{label}</a>',
                 'items' => [
-                    ['label' => 'Ventas', 'url' => ['clientes/index']],
-                    ['label' => 'Compras', 'url' => ['clientes/index']],
-                    ['label' => 'Dev/Compras', 'url' => ['clientes/index']],
-                    ['label' => 'Dev/Ventas', 'url' => ['clientes/index']],
+                    ['label' => 'Administrar alumnos', 'url' => ['clientes/index']],
                 ],
             ];
 
