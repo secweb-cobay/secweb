@@ -46,29 +46,29 @@ AppAsset::register($this);
 
         } else {
             $menuItems[] = [
-                'label' => 'School Subjects', 'url' => ['site/index'],
+                'label' => 'Materias', 'url' => ['site/index'],
                 'options' => ['class' => 'dropdown'],
                 'template' => '<a href="{url}" class="href_class">{label}</a>',
                 'items' => [
-                    ['label' => 'Manage Subjects', 'url' => ['user/index']],
+                    ['label' => 'Administrar materias', 'url' => ['user/index']],
                     
                 ],
             ];
             $menuItems[] = [
-                'label' => 'Teachers', 'url' => ['site/index'],
+                'label' => 'Maestros', 'url' => ['site/index'],
                 'options' => ['class' => 'dropdown'],
                 'template' => '<a href="{url}" class="href_class">{label}</a>',
                 'items' => [
-                    ['label' => 'Manage Teachers', 'url' => ['clientes/index']],
+                    ['label' => 'Administarar Maestros', 'url' => ['clientes/index']],
                 ],
             ];
 
             $menuItems[] = [
-                'label' => 'Students', 'url' => ['site/index'],
+                'label' => 'Alumnos', 'url' => ['site/index'],
                 'options' => ['class' => 'dropdown'],
                 'template' => '<a href="{url}" class="href_class">{label}</a>',
                 'items' => [
-                    ['label' => 'Manage Students', 'url' => ['clientes/index']],
+                    ['label' => 'Administrar alumnos', 'url' => ['clientes/index']],
                 ],
             ];
 
